@@ -1,6 +1,8 @@
 Hwywh::Application.routes.draw do
+  devise_for :users
+
   get "welcome/index"
-  get 'about' => 'users#about'
+  get 'about' => 'welcome#about'
 
   root :to => 'welcome#index'
 

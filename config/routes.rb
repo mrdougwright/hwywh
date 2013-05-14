@@ -1,7 +1,8 @@
 Hwywh::Application.routes.draw do
+  get "welcome/index"
   get 'about' => 'users#about'
 
-  root :to => 'users#about'
+  root :to => 'welcome#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

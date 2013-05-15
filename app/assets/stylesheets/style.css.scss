@@ -1,2 +1,11 @@
 @import 'bootstrap';
 @import 'bootstrap-responsive';
+
+.no-underline {
+  color: inherit;
+}
+
+.no-underline:hover,
+.no-underline:focus {
+  text-decoration: none;
+}

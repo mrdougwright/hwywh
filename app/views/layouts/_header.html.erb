@@ -1,8 +1,13 @@
 <div class="masthead">
   <ul class="nav nav-pills pull-right">
-    <li><%= link_to 'Home', root_path %></li>
     <li><%= link_to 'About', about_path %></li>
+    <% if user_signed_in? %>
+      <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+    <% else %>
+      <li><%= link_to 'Login', new_user_session_path %></li>
+    <% end %>
   </ul>
-  <h3 class="muted">hwywh</h3>
+  <h3 class="muted"><%= link_to 'hwywh', root_path, class: 'no-underline' %></h3>
+
 </div>
 <hr>

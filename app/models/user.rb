@@ -10,4 +10,13 @@ class User < ActiveRecord::Base
                   :remember_me, :name, :phone, :message, :time,
                   :frequency
   # attr_accessible :title, :body
+  
+  # dirty implementation for admin access:
+  def admin?(user)
+    if user.email == 'mrdougwright@gmail.com' or user.email == 'janekim9321@gmail.com'
+      return true
+    else
+      return false
+    end
+  end
 end

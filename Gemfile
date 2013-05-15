@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
 gem 'rails_admin'
+gem 'cancan'
 
 group :production do
   gem 'pg'
